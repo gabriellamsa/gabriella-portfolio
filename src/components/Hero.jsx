@@ -1,3 +1,4 @@
+import { hero_content } from "../assets/data/data";
 import profilePic from "../assets/images/profilePic.jpg";
 
 export const Hero = () => {
@@ -23,7 +24,7 @@ export const Hero = () => {
               Front-End Developer
             </span>
             <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter">
-              HERO_CONTENT here
+              {hero_content}
             </p>
             <a
               href="/gabriellamsa-resume.pdf"
