@@ -1,5 +1,6 @@
 import { Hero } from "./components/Hero";
 import { Navebar } from "./components/Navbar";
+import { Projects } from "./components/Projects";
 import { Technologies } from "./components/Technologies";
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
           <Navebar />
           <Hero />
           <Technologies />
+          <Projects />
         </div>
       </div>
     </div>
