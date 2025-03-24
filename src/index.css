@@ -4,4 +4,5 @@
 
 :root {
   font-family: "Inter", sans-serif;
+  background: oklch(0.948 0.028 342.258);
 }
