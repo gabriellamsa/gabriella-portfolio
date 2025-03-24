@@ -1,3 +1,4 @@
+import { Hero } from "./components/Hero";
 import { Navebar } from "./components/Navbar";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
 
         <div className="container mx-auto px-8">
           <Navebar />
+          <Hero />
         </div>
       </div>
     </div>
