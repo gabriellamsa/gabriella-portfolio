@@ -34,7 +34,7 @@ export const projects = [
 
 export const experiences = [
   {
-    year: "September 2024 - Present",
+    year: "2024 - Present",
     role: "Front-End Developer",
     company: "Freelancer",
     description: `Designed and developed high-performance, fully-responsive web applications using modern front-end technologies. Focused on writing clean, scalable, and maintainable code while ensuring an exceptional user experience. Integrated APIs, optimized performance, and applied best practices in UI/UX to deliver impactful digital solutions.`,
@@ -42,14 +42,14 @@ export const experiences = [
     projectLink: "https://github.com/gabriellamsa/purific-ar",
   },
   {
-    year: "January 2024 – June 2024",
+    year: "2024 – 2024",
     role: "Commercial Sales",
     company: "ALIEST - Escritório Associado Conexão C6 Bank",
     description: `Led strategic sales initiatives, managed customer relationships, and optimized business processes to drive revenue growth. Developed strong negotiation and communication skills while implementing data-driven sales strategies.`,
     technologies: ["CRM", "Sales Analytics", "Customer Engagement", "Business Development"],
   },
   {
-    year: "December 2021 – August 2022",
+    year: "2021 – 2022",
     role: "Store Manager",
     company: "MOSKKITO",
     description: `Managed store operations, led a high-performance sales team, and implemented workflow improvements to enhance efficiency. Focused on customer satisfaction, inventory control, and data-driven decision-making to increase profitability.`,
