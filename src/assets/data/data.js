@@ -56,3 +56,8 @@ export const experiences = [
     technologies: ["Retail Management", "Data Analytics", "Leadership", "Customer Experience"],
   },
 ];
+
+export const contact = {
+  address: "4050 - Porto, Portugal",
+  /* insert contact form */
+};
