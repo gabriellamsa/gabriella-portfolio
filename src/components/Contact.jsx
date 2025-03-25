@@ -1,23 +1,51 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL;
 
 export const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     message: "",
   });
   const [status, setStatus] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
+    setError("");
 
-    // Simulate form submission (replace with actual submission)
-    setTimeout(() => {
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.error("EmailJS configuration is missing");
+      setError(
+        "Email service is not configured properly. Please try again later."
+      );
+      setStatus("");
+      return;
+    }
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form.current,
+        EMAILJS_PUBLIC_KEY
+      );
+
       setStatus("sent");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ user_name: "", user_email: "", message: "" });
       setTimeout(() => setStatus(""), 3000);
-    }, 1000);
+    } catch (error) {
+      console.error("Error:", error);
+      setError("Failed to send message. Please try again later.");
+      setStatus("");
+    }
   };
 
   const handleChange = (e) => {
@@ -31,7 +59,7 @@ export const Contact = () => {
           Get in Touch
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form ref={form} onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
               <label
@@ -43,8 +71,8 @@ export const Contact = () => {
               <input
                 type="text"
                 id="name"
-                name="name"
-                value={formData.name}
+                name="user_name"
+                value={formData.user_name}
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-2 border border-stone-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition duration-200 ease-in-out bg-white/50 text-stone-900"
@@ -61,8 +89,8 @@ export const Contact = () => {
               <input
                 type="email"
                 id="email"
-                name="email"
-                value={formData.email}
+                name="user_email"
+                value={formData.user_email}
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-2 border border-stone-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition duration-200 ease-in-out bg-white/50 text-stone-900"
@@ -109,6 +137,10 @@ export const Contact = () => {
               <p className="mt-4 text-teal-600 animate-fade-in">
                 Message sent successfully!
               </p>
+            )}
+
+            {error && (
+              <p className="mt-4 text-red-600 animate-fade-in">{error}</p>
             )}
           </div>
         </form>
