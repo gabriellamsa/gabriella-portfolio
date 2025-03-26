@@ -8,35 +8,13 @@ import {
 import { motion } from "framer-motion";
 
 const technologies = [
-  { icon: TbBrandHtml5, color: "text-orange-400" },
-  { icon: TbBrandCss3, color: "text-sky-400" },
-  { icon: TbBrandJavascript, color: "text-amber-400" },
-  { icon: RiReactjsLine, color: "text-cyan-400" },
-  { icon: RiTailwindCssFill, color: "text-cyan-400" },
-  { icon: TbBrandGit, color: "text-red-400" },
+  { icon: TbBrandHtml5, color: "text-orange-400", delay: 0 },
+  { icon: TbBrandCss3, color: "text-sky-400", delay: 0.2 },
+  { icon: TbBrandJavascript, color: "text-amber-400", delay: 0.4 },
+  { icon: RiReactjsLine, color: "text-cyan-400", delay: 0.6 },
+  { icon: RiTailwindCssFill, color: "text-cyan-400", delay: 0.8 },
+  { icon: TbBrandGit, color: "text-red-400", delay: 1 },
 ];
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, scale: 0.5 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-    },
-  },
-};
 
 export const Technologies = () => {
   return (
@@ -45,27 +23,31 @@ export const Technologies = () => {
         className="my-20 text-center text-4xl"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         Technologies
       </motion.h2>
 
-      <motion.div
-        className="flex flex-wrap items-center justify-center gap-12"
-        variants={container}
-        initial="hidden"
-        animate="show"
-      >
+      <motion.div className="flex flex-wrap items-center justify-center gap-12">
         {technologies.map((tech, index) => (
           <motion.div
             key={index}
-            variants={item}
+            className={`${tech.color} text-7xl cursor-pointer`}
+            animate={{
+              y: [-8, 8, -8],
+              transition: {
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+                delay: tech.delay,
+              },
+            }}
             whileHover={{
               scale: 1.2,
               rotate: 360,
               transition: { duration: 0.5 },
             }}
-            className={`${tech.color} text-7xl cursor-pointer`}
           >
             <tech.icon />
           </motion.div>
