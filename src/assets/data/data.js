@@ -16,19 +16,22 @@ export const projects = [
     code: "https://github.com/gabriellamsa/purific-ar",
   },
   {
-    title: "Nucampsite React",
+    title: "Shopping Cart",
     image: project2,
     description:
-      "A campsite management application built with React and Redux, featuring booking functionality, user reviews, and detailed campsite information. Designed to be fully responsive with an engaging user interface for a seamless experience. This project was developed as part of the Front-End Web Development Bootcamp by Nucamp.",
+      "A modern and interactive shopping cart application built with React, featuring smooth state management, local storage persistence, and an intuitive UI design.",
+    technologies: ["React", "JavaScript", "Tailwind CSS"],
+    liveDemo: "https://shopping-cart-six-indol.vercel.app/",
+    code: "https://github.com/gabriellamsa/shopping-cart",
+  },
+  {
+    title: "Nucampsite React",
+    image: project3,
+    description:
+      "A campsite management application built with React and Redux, featuring booking functionality, user reviews, and detailed campsite information. Designed to be fully responsive with an engaging user interface for a seamless experience.",
     technologies: ["React", "Redux", "JavaScript", "Bootstrap"],
     liveDemo: "https://nucampsite-react-steel.vercel.app/",
     code: "https://github.com/gabriellamsa/nucampsite-react",
-  },
-  {
-    title: "Project Title",
-    image: project3,
-    description: "Project description --explain exactly what was done and what its features are",
-    technologies: ["HTML5", "TailwindCSS", "React"],
   },
   {
     title: "Project Title",
