@@ -7,16 +7,22 @@ export const hero_content = `I design and develop user-friendly, responsive, and
 
 export const projects = [
   {
-    title: "Project Title",
+    title: "Purific Ar",
     image: project1,
-    description: "Project description --explain exactly what was done and what its features are",
-    technologies: ["HTML5", "TailwindCSS", "React"],
+    description:
+      "A professional website developed for Purific Ar, a company specializing in air conditioning installation and maintenance. Built with React and Tailwind CSS, it features a modern, responsive design, an intuitive service booking system, and an optimized user experience.",
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    liveDemo: "https://purific-ar.vercel.app/",
+    code: "https://github.com/gabriellamsa/purific-ar",
   },
   {
-    title: "Project Title",
+    title: "Nucampsite React",
     image: project2,
-    description: "Project description --explain exactly what was done and what its features are",
-    technologies: ["HTML5", "TailwindCSS", "React"],
+    description:
+      "A campsite management application built with React and Redux, featuring booking functionality, user reviews, and detailed campsite information. Designed to be fully responsive with an engaging user interface for a seamless experience. This project was developed as part of the Front-End Web Development Bootcamp by Nucamp.",
+    technologies: ["React", "Redux", "JavaScript", "Bootstrap"],
+    liveDemo: "https://nucampsite-react-steel.vercel.app/",
+    code: "https://github.com/gabriellamsa/nucampsite-react",
   },
   {
     title: "Project Title",

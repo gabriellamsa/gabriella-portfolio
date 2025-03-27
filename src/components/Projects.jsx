@@ -65,6 +65,28 @@ export const Projects = () => {
                   </span>
                 ))}
               </div>
+              <div className="mt-4 flex gap-4">
+                {project.liveDemo && (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-teal-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-teal-600 transition"
+                  >
+                    LIVE DEMO
+                  </a>
+                )}
+                {project.code && (
+                  <a
+                    href={project.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-900 transition"
+                  >
+                    CODE
+                  </a>
+                )}
+              </div>
             </div>
           </motion.div>
         ))}
