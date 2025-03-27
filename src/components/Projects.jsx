@@ -41,11 +41,11 @@ export const Projects = () => {
               transition: { duration: 0.3, ease: "easeOut" },
             }}
           >
-            <div className="w-full lg:w-1/3 flex justify-center">
+            <div className="w-full lg:w-1/4 flex justify-center">
               <motion.img
                 src={project.image}
                 alt={project.title}
-                className="rounded-lg shadow-md"
+                className="rounded-lg shadow-md w-64 h-auto"
                 whileHover={{
                   scale: 1.05,
                   transition: { duration: 0.3 },
