@@ -1,29 +1,60 @@
 import { experiences } from "../assets/data/data";
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      ease: "easeInOut",
+      duration: 1.2,
+    },
+  },
+};
+
+const yearVariants = {
+  hidden: { opacity: 0, x: -30 },
+  show: { opacity: 1, x: 0, transition: { duration: 1.2, ease: "easeInOut" } },
+};
+
+const contentVariants = {
+  hidden: { opacity: 0, x: 30 },
+  show: { opacity: 1, x: 0, transition: { duration: 1.2, ease: "easeInOut" } },
+};
+
 export const Experience = () => {
   return (
     <div className="pb-4">
       <motion.h2
         className="my-20 text-center text-4xl"
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0, y: -50 }}
+        transition={{ duration: 1.2, ease: "easeInOut" }}
       >
         Experience
       </motion.h2>
       <div>
         {experiences.map((experience, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-            <div className="w-full lg:w-1/4">
+          <motion.div
+            key={index}
+            className="mb-8 flex flex-wrap lg:justify-center"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.1 }}
+          >
+            <motion.div className="w-full lg:w-1/4" variants={yearVariants}>
               <h3 className="mb-2 text-medium font-semibold text-stone-800">
                 {experience.year}
               </h3>
-            </div>
-
-            <div className="w-full max-w-xl lg:w-3/4">
+            </motion.div>
+            <motion.div
+              className="w-full max-w-xl lg:w-3/4"
+              variants={contentVariants}
+            >
               <h3 className="mb-2 font-semibold">
-                {experience.role} -{" "}
+                {experience.role} -
                 <span className="text-sm font-semibold text-stone-800">
                   {experience.company}
                 </span>
@@ -37,7 +68,6 @@ export const Experience = () => {
                   {tech}
                 </span>
               ))}
-
               {experience.projectLink && (
                 <div className="mt-4">
                   <a
@@ -50,8 +80,8 @@ export const Experience = () => {
                   </a>
                 </div>
               )}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </div>

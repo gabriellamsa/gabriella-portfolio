@@ -11,8 +11,17 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const imageVariants = {
   hidden: { opacity: 0, x: -100 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+};
+
+const contentVariants = {
+  hidden: { opacity: 0, x: 100 },
   show: {
     opacity: 1,
     x: 0,
@@ -42,20 +51,22 @@ export const Projects = () => {
           <motion.div
             key={index}
             className="mb-8 flex flex-col items-center lg:flex-row lg:justify-center lg:items-center"
-            variants={itemVariants}
-            whileHover={{
-              scale: 1.05,
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
+            variants={containerVariants}
           >
-            <div className="w-full lg:w-1/4 flex justify-center">
+            <motion.div
+              className="w-full lg:w-1/4 flex justify-center"
+              variants={imageVariants}
+            >
               <motion.img
                 src={project.image}
                 alt={project.title}
                 className="rounded-lg shadow-md w-64 h-auto"
               />
-            </div>
-            <div className="w-full lg:w-2/3 flex flex-col items-center lg:items-start text-center lg:text-left lg:pl-8">
+            </motion.div>
+            <motion.div
+              className="w-full lg:w-2/3 flex flex-col items-center lg:items-start text-center lg:text-left lg:pl-8"
+              variants={contentVariants}
+            >
               <h3 className="text-2xl font-semibold">{project.title}</h3>
               <p className="mt-2">{project.description}</p>
               <div className="mt-4 flex flex-wrap justify-center lg:justify-start gap-2">
@@ -90,7 +101,7 @@ export const Projects = () => {
                   </a>
                 )}
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>
