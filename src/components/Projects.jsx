@@ -52,6 +52,8 @@ export const Projects = () => {
             key={index}
             className="mb-8 flex flex-col items-center lg:flex-row lg:justify-center lg:items-center"
             variants={containerVariants}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           >
             <motion.div
               className="w-full lg:w-1/4 flex justify-center"
