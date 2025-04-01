@@ -31,7 +31,10 @@ export const Hero = () => {
             <h1 className="pb-2 text-4xl tracking-tightr lg:text-8xl font-bold">
               Gabriella Andrade
             </h1>
-            <span className="bg-gradient-to-r from-stone-600 to-stone-300 bg-clip-text text-3xl tracking-tight text-transparent">
+            <span
+              className="bg-gradient-to-r from-stone-700 to-stone-400 bg-clip-text text-3xl tracking-tight text-transparent"
+              style={{ fontFamily: "Major Mono Display, monospace" }}
+            >
               Front-End Developer
             </span>
             <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter">

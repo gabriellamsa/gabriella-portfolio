@@ -4,6 +4,7 @@ import {
   TbBrandGit,
   TbBrandHtml5,
   TbBrandJavascript,
+  TbBrandNodejs,
 } from "react-icons/tb";
 import { motion } from "framer-motion";
 
@@ -14,6 +15,7 @@ const technologies = [
   { icon: RiReactjsLine, color: "text-cyan-400", delay: 0.6 },
   { icon: RiTailwindCssFill, color: "text-cyan-400", delay: 0.8 },
   { icon: TbBrandGit, color: "text-red-400", delay: 1 },
+  { icon: TbBrandNodejs, color: "text-emerald-400", delay: 1.2 },
 ];
 
 export const Technologies = () => {
@@ -21,9 +23,9 @@ export const Technologies = () => {
     <div className="pb-24">
       <motion.h2
         className="my-20 text-center text-4xl"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
       >
         Technologies
       </motion.h2>

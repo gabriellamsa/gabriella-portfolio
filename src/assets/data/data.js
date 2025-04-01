@@ -48,13 +48,13 @@ export const experiences = [
     role: "Commercial Sales",
     company: "ALIEST - Escritório Associado Conexão C6 Bank",
     description: `Led strategic sales initiatives, managed customer relationships, and optimized business processes to drive revenue growth. Developed strong negotiation and communication skills while implementing data-driven sales strategies.`,
-    technologies: ["CRM", "Sales Analytics", "Customer Engagement", "Business Development"],
+    technologies: ["CRM", "Customer Engagement", "Business Development"],
   },
   {
     year: "2021 – 2022",
     role: "Store Manager",
     company: "MOSKKITO",
     description: `Managed store operations, led a high-performance sales team, and implemented workflow improvements to enhance efficiency. Focused on customer satisfaction, inventory control, and data-driven decision-making to increase profitability.`,
-    technologies: ["Retail Management", "Data Analytics", "Leadership", "Customer Experience"],
+    technologies: ["Data Analytics", "Leadership", "Customer Experience"],
   },
 ];

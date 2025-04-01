@@ -29,7 +29,14 @@ export const Projects = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.1 }}
     >
-      <h2 className="my-20 text-center text-4xl">Projects</h2>
+      <motion.h2
+        className="my-20 text-center text-4xl"
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1 }}
+      >
+        Projects
+      </motion.h2>
       <div>
         {projects.map((project, index) => (
           <motion.div
@@ -37,7 +44,7 @@ export const Projects = () => {
             className="mb-8 flex flex-col items-center lg:flex-row lg:justify-center lg:items-center"
             variants={itemVariants}
             whileHover={{
-              y: -10,
+              scale: 1.05,
               transition: { duration: 0.3, ease: "easeOut" },
             }}
           >
@@ -46,10 +53,6 @@ export const Projects = () => {
                 src={project.image}
                 alt={project.title}
                 className="rounded-lg shadow-md w-64 h-auto"
-                whileHover={{
-                  scale: 1.05,
-                  transition: { duration: 0.3 },
-                }}
               />
             </div>
             <div className="w-full lg:w-2/3 flex flex-col items-center lg:items-start text-center lg:text-left lg:pl-8">
@@ -71,7 +74,7 @@ export const Projects = () => {
                     href={project.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-teal-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-teal-600 transition"
+                    className="bg-teal-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-teal-600 transition"
                   >
                     LIVE DEMO
                   </a>
@@ -81,7 +84,7 @@ export const Projects = () => {
                     href={project.code}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-900 transition"
+                    className="bg-gray-800 text-white px-4 py-2 rounded-full shadow-md hover:bg-gray-900 transition"
                   >
                     CODE
                   </a>
