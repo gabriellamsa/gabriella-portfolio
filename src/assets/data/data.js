@@ -6,22 +6,22 @@ export const hero_content = `I design and develop user-friendly, responsive, and
 
 export const projects = [
   {
-    title: "Purific Ar",
-    image: project1,
-    description:
-      "A professional website developed for Purific Ar, a company specializing in air conditioning installation and maintenance. Built with React and Tailwind CSS, it features a modern, responsive design, an intuitive service booking system, and an optimized user experience.",
-    technologies: ["React", "Tailwind CSS", "JavaScript"],
-    liveDemo: "https://purific-ar.vercel.app/",
-    code: "https://github.com/gabriellamsa/purific-ar",
-  },
-  {
     title: "Shopping Cart",
-    image: project2,
+    image: project1,
     description:
       "A modern and interactive shopping cart application built with React, featuring smooth state management, local storage persistence, and an intuitive UI design.",
     technologies: ["React", "JavaScript", "Tailwind CSS"],
     liveDemo: "https://shopping-cart-six-indol.vercel.app/",
     code: "https://github.com/gabriellamsa/shopping-cart",
+  },
+  {
+    title: "Purific Ar",
+    image: project2,
+    description:
+      "A professional website developed for Purific Ar, a company specializing in air conditioning installation and maintenance. Built with React and Tailwind CSS, it features a modern, responsive design, an intuitive service booking system, and an optimized user experience.",
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    liveDemo: "https://purific-ar.vercel.app/",
+    code: "https://github.com/gabriellamsa/purific-ar",
   },
   {
     title: "Nucampsite React",
