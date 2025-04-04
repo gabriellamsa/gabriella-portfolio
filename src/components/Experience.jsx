@@ -60,21 +60,25 @@ export const Experience = () => {
                 </span>
               </h3>
               <p className="mb-4 text-stone-600">{experience.description}</p>
-              {experience.technologies.map((tech, index) => (
-                <span
-                  className="mr-2 mt-4 rounded-full bg-gray-800 px-3 py-1 text-sm text-white"
-                  key={index}
-                >
-                  {tech}
-                </span>
-              ))}
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {experience.technologies.map((tech, index) => (
+                  <span
+                    className="rounded-full bg-gray-800 px-3 py-1 text-sm text-white"
+                    key={index}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
               {experience.projectLink && (
                 <div className="mt-4">
                   <a
                     href={experience.projectLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-2 mt-4 rounded-full bg-teal-500 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-teal-600 hover:text-white shadow-md"
+                    className="rounded-full bg-teal-500 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-teal-600 shadow-md"
                   >
                     View Project
                   </a>
