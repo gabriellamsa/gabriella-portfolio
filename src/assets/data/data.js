@@ -1,13 +1,23 @@
 import project1 from "../../assets/images/projects/project-1.jpg";
 import project2 from "../../assets/images/projects/project-2.jpg";
 import project3 from "../../assets/images/projects/project-3.jpg";
+import project4 from "../../assets/images/projects/project-4.jpg"
 
 export const hero_content = `I design and develop user-friendly, responsive, and visually engaging interfaces using HTML5, TailwindCSS, JavaScript, and React. My passion is crafting clean, efficient code that brings ideas to life, ensuring a seamless and enjoyable experience for users. Every project is an opportunity to create something meaningful with care and attention to detail.`
 
 export const projects = [
   {
-    title: "Shopping Cart",
+    title: "Product Landing Page",
     image: project1,
+    description:
+      "A modern and responsive product landing page built with Next.js 15, React 19, and Tailwind CSS 4. Featuring smooth animations, dark/light mode support, and optimized performance with Turbopack, this landing page provides an engaging and professional user experience.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    liveDemo: "https://nextjs-product-landing.vercel.app/",
+    code: "https://github.com/gabriellamsa/nextjs-product-landing",
+  },
+  {
+    title: "Shopping Cart",
+    image: project2,
     description:
       "A modern and interactive shopping cart application built with React, featuring smooth state management, local storage persistence, and an intuitive UI design.",
     technologies: ["React", "JavaScript", "Tailwind CSS"],
@@ -16,7 +26,7 @@ export const projects = [
   },
   {
     title: "Purific Ar",
-    image: project2,
+    image: project3,
     description:
       "A professional website developed for Purific Ar, a company specializing in air conditioning installation and maintenance. Built with React and Tailwind CSS, it features a modern, responsive design, an intuitive service booking system, and an optimized user experience.",
     technologies: ["React", "Tailwind CSS", "JavaScript"],
@@ -25,7 +35,7 @@ export const projects = [
   },
   {
     title: "Nucampsite React",
-    image: project3,
+    image: project4,
     description:
       "A campsite management application built with React and Redux, featuring booking functionality, user reviews, and detailed campsite information. Designed to be fully responsive with an engaging user interface for a seamless experience.",
     technologies: ["React", "Redux", "JavaScript", "Bootstrap"],
