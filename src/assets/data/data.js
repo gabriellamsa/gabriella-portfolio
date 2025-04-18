@@ -1,19 +1,20 @@
-import project1 from "../../assets/images/projects/project-1.jpg";
-import project2 from "../../assets/images/projects/project-2.jpg";
-import project3 from "../../assets/images/projects/project-3.jpg";
-import project4 from "../../assets/images/projects/project-4.jpg"
+import project1 from "../images/projects/project-1.jpg";
+import project2 from "../images/projects/project-2.jpg";
+import project3 from "../images/projects/project-3.jpg";
+import project4 from "../images/projects/project-4.jpg";
+import project5 from "../images/projects/project-5.jpg";
 
 export const hero_content = `I design and develop user-friendly, responsive, and visually engaging interfaces using HTML5, TailwindCSS, JavaScript, and React. My passion is crafting clean, efficient code that brings ideas to life, ensuring a seamless and enjoyable experience for users. Every project is an opportunity to create something meaningful with care and attention to detail.`
 
 export const projects = [
   {
-    title: "Product Landing Page",
+    title: "Music Player",
     image: project1,
     description:
-      "A modern and responsive product landing page built with Next.js 15, React 19, and Tailwind CSS 4. Featuring smooth animations, dark/light mode support, and optimized performance with Turbopack, this landing page provides an engaging and professional user experience.",
-    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    liveDemo: "https://nextjs-product-landing.vercel.app/",
-    code: "https://github.com/gabriellamsa/nextjs-product-landing",
+      "A modern and responsive music player built with Next.js 15, React 19, and Tailwind CSS 4. Featuring a sleek interface, full audio playback controls, smooth animations, and an advanced search system, this application delivers a seamless music listening experience across all devices.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion", "Lucide React"],
+    liveDemo: "https://music-player-peach-eight.vercel.app/",
+    code: "https://github.com/gabriellamsa/music-player",
   },
   {
     title: "Shopping Cart",
@@ -25,8 +26,17 @@ export const projects = [
     code: "https://github.com/gabriellamsa/shopping-cart",
   },
   {
-    title: "Purific Ar",
+    title: "Product Landing Page",
     image: project3,
+    description:
+      "A modern and responsive product landing page built with Next.js 15, React 19, and Tailwind CSS 4. Featuring smooth animations, dark/light mode support, and optimized performance with Turbopack, this landing page provides an engaging and professional user experience.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    liveDemo: "https://nextjs-product-landing.vercel.app/",
+    code: "https://github.com/gabriellamsa/nextjs-product-landing",
+  },
+  {
+    title: "Purific Ar",
+    image: project4,
     description:
       "A professional website developed for Purific Ar, a company specializing in air conditioning installation and maintenance. Built with React and Tailwind CSS, it features a modern, responsive design, an intuitive service booking system, and an optimized user experience.",
     technologies: ["React", "Tailwind CSS", "JavaScript"],
@@ -35,7 +45,7 @@ export const projects = [
   },
   {
     title: "Nucampsite React",
-    image: project4,
+    image: project5,
     description:
       "A campsite management application built with React and Redux, featuring booking functionality, user reviews, and detailed campsite information. Designed to be fully responsive with an engaging user interface for a seamless experience.",
     technologies: ["React", "Redux", "JavaScript", "Bootstrap"],

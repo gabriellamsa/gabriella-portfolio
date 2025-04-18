@@ -42,7 +42,7 @@ export const Hero = () => {
             </p>
 
             <motion.a
-              href="/gabriellamsa-resume.pdf"
+              href="/gabriella-andrade-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
