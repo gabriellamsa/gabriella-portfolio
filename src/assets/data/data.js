@@ -8,8 +8,17 @@ export const hero_content = `I design and develop user-friendly, responsive, and
 
 export const projects = [
   {
-    title: "Music Player",
+    title: "Paws & Purpose",
     image: project1,
+    description:
+      "A modern web platform that connects pet lovers with their ideal companions. Featuring a responsive and intuitive interface, it’s built with Next.js 15, React 19, and Tailwind CSS 4, with smooth animations via Framer Motion and an interactive carousel using Keen Slider. Optimized with Turbopack for high performance and smooth navigation.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion", "Keen Slider", "Lucide React"],
+    liveDemo: "https://paws-and-purpose.vercel.app/",
+    code: "https://github.com/gabriellamsa/paws-and-purpose",
+  },
+  {
+    title: "Music Player",
+    image: project2,
     description:
       "A modern and responsive music player built with Next.js 15, React 19, and Tailwind CSS 4. Featuring a sleek interface, full audio playback controls, smooth animations, and an advanced search system, this application delivers a seamless music listening experience across all devices.",
     technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion", "Lucide React"],
@@ -18,7 +27,7 @@ export const projects = [
   },
   {
     title: "Shopping Cart",
-    image: project2,
+    image: project3,
     description:
       "A modern and interactive shopping cart application built with React, featuring smooth state management, local storage persistence, and an intuitive UI design.",
     technologies: ["React", "JavaScript", "Tailwind CSS"],
@@ -27,7 +36,7 @@ export const projects = [
   },
   {
     title: "Product Landing Page",
-    image: project3,
+    image: project4,
     description:
       "A modern and responsive product landing page built with Next.js 15, React 19, and Tailwind CSS 4. Featuring smooth animations, dark/light mode support, and optimized performance with Turbopack, this landing page provides an engaging and professional user experience.",
     technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
@@ -36,7 +45,7 @@ export const projects = [
   },
   {
     title: "Purific Ar",
-    image: project4,
+    image: project5,
     description:
       "A professional website developed for Purific Ar, a company specializing in air conditioning installation and maintenance. Built with React and Tailwind CSS, it features a modern, responsive design, an intuitive service booking system, and an optimized user experience.",
     technologies: ["React", "Tailwind CSS", "JavaScript"],
@@ -45,7 +54,7 @@ export const projects = [
   },
   {
     title: "Nucampsite React",
-    image: project5,
+    image: project1,
     description:
       "A campsite management application built with React and Redux, featuring booking functionality, user reviews, and detailed campsite information. Designed to be fully responsive with an engaging user interface for a seamless experience.",
     technologies: ["React", "Redux", "JavaScript", "Bootstrap"],
