@@ -4,7 +4,7 @@ import project3 from "../images/projects/project-3.jpg";
 import project4 from "../images/projects/project-4.jpg";
 import project5 from "../images/projects/project-5.jpg";
 
-export const hero_content = `I design and develop user-friendly, responsive, and visually engaging interfaces using HTML5, TailwindCSS, JavaScript, and React. My passion is crafting clean, efficient code that brings ideas to life, ensuring a seamless and enjoyable experience for users. Every project is an opportunity to create something meaningful with care and attention to detail.`
+export const hero_content = `Front-End Developer passionate about building responsive, accessible, and visually engaging web experiences. I craft clean, efficient code using React, Next.js, Tailwind CSS, TypeScript, and JavaScript -— always with a focus on performance and user experience. Constantly exploring new technologies like Next.js 15 and React 19, I thrive on learning and pushing my skills forward. Every project is a chance to bring ideas to life with care, creativity, and attention to detail.`
 
 export const projects = [
   {
@@ -67,23 +67,23 @@ export const experiences = [
   {
     year: "2024 - Present",
     role: "Front-End Developer",
-    company: "Freelancer",
-    description: `Designed and developed high-performance, fully-responsive web applications using modern front-end technologies. Focused on writing clean, scalable, and maintainable code while ensuring an exceptional user experience. Integrated APIs, optimized performance, and applied best practices in UI/UX to deliver impactful digital solutions.`,
+    company: "Freelance",
+    description: `Developed responsive and high-performance interfaces using React, Next.js, and TypeScript, delivering pixel-perfect UIs and collaborating with clients to meet business goals.`,
     technologies: ["React", "JavaScript", "Tailwind CSS", "Next.js", "REST APIs"],
     projectLink: "https://github.com/gabriellamsa/purific-ar",
   },
   {
     year: "2024 – 2024",
-    role: "Commercial Sales",
-    company: "ALIEST - Escritório Associado Conexão C6 Bank",
-    description: `Led strategic sales initiatives, managed customer relationships, and optimized business processes to drive revenue growth. Developed strong negotiation and communication skills while implementing data-driven sales strategies.`,
+    role: "Sales Consultant",
+    company: "ALIEST Conexão",
+    description: `Managed B2B/B2C sales of financial solutions, emphasizing customer experience and personalized service.`,
     technologies: ["CRM", "Customer Engagement", "Business Development"],
   },
   {
     year: "2021 – 2022",
     role: "Store Manager",
     company: "MOSKKITO",
-    description: `Managed store operations, led a high-performance sales team, and implemented workflow improvements to enhance efficiency. Focused on customer satisfaction, inventory control, and data-driven decision-making to increase profitability.`,
+    description: `Led daily operations, customer service, and team coordination, improving store performance and client satisfaction.`,
     technologies: ["Data Analytics", "Leadership", "Customer Experience"],
   },
 ];

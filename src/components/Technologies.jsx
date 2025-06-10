@@ -4,7 +4,9 @@ import {
   TbBrandGit,
   TbBrandHtml5,
   TbBrandJavascript,
+  TbBrandNextjs,
   TbBrandNodejs,
+  TbBrandTypescript,
 } from "react-icons/tb";
 import { motion } from "framer-motion";
 
@@ -16,6 +18,8 @@ const technologies = [
   { icon: RiTailwindCssFill, color: "text-cyan-400", delay: 0.8 },
   { icon: TbBrandGit, color: "text-red-400", delay: 1 },
   { icon: TbBrandNodejs, color: "text-emerald-400", delay: 1.2 },
+  { icon: TbBrandNextjs, color: "text-stone-900", delay: 1.4 },
+  { icon: TbBrandTypescript, color: "text-blue-400", delay: 1.6 },
 ];
 
 export const Technologies = () => {
