@@ -25,7 +25,7 @@ const contentVariants = {
 
 export const Experience = () => {
   return (
-    <div className="pb-4">
+    <div id="experience" className="pb-4">
       <motion.h2
         className="my-20 text-center text-4xl"
         whileInView={{ opacity: 1, y: 0 }}

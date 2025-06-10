@@ -32,6 +32,7 @@ const contentVariants = {
 export const Projects = () => {
   return (
     <motion.div
+      id="projects"
       className="pb-4"
       variants={containerVariants}
       initial="hidden"

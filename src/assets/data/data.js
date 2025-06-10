@@ -11,7 +11,7 @@ export const projects = [
     title: "Paws & Purpose",
     image: project1,
     description:
-      "A modern web platform that connects pet lovers with their ideal companions. Featuring a responsive and intuitive interface, it’s built with Next.js 15, React 19, and Tailwind CSS 4, with smooth animations via Framer Motion and an interactive carousel using Keen Slider. Optimized with Turbopack for high performance and smooth navigation.",
+      "A modern web platform that connects pet lovers with their ideal companions. Featuring a responsive and intuitive interface, it's built with Next.js 15, React 19, and Tailwind CSS 4, with smooth animations via Framer Motion and an interactive carousel using Keen Slider. Optimized with Turbopack for high performance and smooth navigation.",
     technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion", "Keen Slider", "Lucide React"],
     liveDemo: "https://paws-and-purpose.vercel.app/",
     code: "https://github.com/gabriellamsa/paws-and-purpose",
