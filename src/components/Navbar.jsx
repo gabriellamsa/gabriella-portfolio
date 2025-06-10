@@ -1,6 +1,8 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/images/logo.png";
 
 export const Navbar = () => {
@@ -78,53 +80,70 @@ export const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-20 right-4 bg-white shadow-lg rounded-lg p-4 w-48">
-          <div className="flex flex-col space-y-4">
-            <a
-              href="#projects"
-              className="text-gray-700 hover:text-teal-500 transition-colors"
-              onClick={toggleMenu}
-            >
-              Projects
-            </a>
-            <a
-              href="#experience"
-              className="text-gray-700 hover:text-teal-500 transition-colors"
-              onClick={toggleMenu}
-            >
-              Experience
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-700 hover:text-teal-500 transition-colors"
-              onClick={toggleMenu}
-            >
-              Contact
-            </a>
-            <div className="flex items-center gap-4 text-2xl pt-2">
-              <a
-                href="https://www.linkedin.com/in/gabriellamsa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden absolute top-20 right-4 bg-white shadow-lg rounded-lg p-4 w-48"
+          >
+            <div className="flex justify-end mb-2">
+              <button
+                onClick={toggleMenu}
                 className="text-gray-700 hover:text-teal-500 transition-colors"
+                aria-label="Close menu"
               >
-                <FaLinkedin />
-              </a>
-              <a
-                href="https://github.com/gabriellamsa"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="text-gray-700 hover:text-teal-500 transition-colors"
-              >
-                <FaGithub />
-              </a>
+                <IoClose size={24} />
+              </button>
             </div>
-          </div>
-        </div>
-      )}
+            <div className="flex flex-col space-y-4">
+              <a
+                href="#projects"
+                className="text-gray-700 hover:text-teal-500 transition-colors"
+                onClick={toggleMenu}
+              >
+                Projects
+              </a>
+              <a
+                href="#experience"
+                className="text-gray-700 hover:text-teal-500 transition-colors"
+                onClick={toggleMenu}
+              >
+                Experience
+              </a>
+              <a
+                href="#contact"
+                className="text-gray-700 hover:text-teal-500 transition-colors"
+                onClick={toggleMenu}
+              >
+                Contact
+              </a>
+              <div className="flex items-center gap-4 text-2xl pt-2">
+                <a
+                  href="https://www.linkedin.com/in/gabriellamsa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="text-gray-700 hover:text-teal-500 transition-colors"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  href="https://github.com/gabriellamsa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="text-gray-700 hover:text-teal-500 transition-colors"
+                >
+                  <FaGithub />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
