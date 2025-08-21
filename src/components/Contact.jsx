@@ -4,7 +4,6 @@ import emailjs from "@emailjs/browser";
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL;
 
 export const Contact = () => {
   const form = useRef();

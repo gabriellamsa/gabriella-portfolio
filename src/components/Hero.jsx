@@ -1,5 +1,5 @@
 import { hero_content } from "../assets/data/data";
-import profilePic from "../assets/images/profilePic.jpg";
+import profilePic from "../assets/images/profilePic.jpeg";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
@@ -35,7 +35,7 @@ export const Hero = () => {
               className="bg-gradient-to-r from-stone-700 to-stone-400 bg-clip-text text-3xl tracking-tight text-transparent"
               style={{ fontFamily: "Major Mono Display, monospace" }}
             >
-              Front-End Developer
+              Frontend React Developer
             </span>
             <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter">
               {hero_content}
